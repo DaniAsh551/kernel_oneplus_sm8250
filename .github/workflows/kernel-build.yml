@@ -1,4 +1,4 @@
-name: Default Build
+name: Build on Tag
 
 on:
   push:
