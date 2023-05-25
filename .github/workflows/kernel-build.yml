@@ -27,7 +27,7 @@ jobs:
         defconfig: kebab_defconfig
         image: Image.gz-dtb
 
-   - name: Release build
+    - name: Release build
       uses: ncipollo/release-action@v1
       with:
         artifacts: ${{ steps.build.outputs.outfile }}
