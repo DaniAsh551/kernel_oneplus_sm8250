@@ -30,7 +30,7 @@ jobs:
     - name: Release build
       uses: ncipollo/release-action@v1
       with:
-        removeArtifacts: true
+        replacesArtifacts: false
         aallowUpdates: true
         artifacts: ${{ steps.build.outputs.outfile }}
         token: ${{ secrets.GITHUB_TOKEN }}
