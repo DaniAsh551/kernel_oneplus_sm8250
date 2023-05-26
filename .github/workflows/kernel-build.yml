@@ -25,11 +25,11 @@ jobs:
         arch: arm64
         compiler: clang/14/binutils
         defconfig: kebab_defconfig
-        image: Image.gz-dtb
+        image: Image
 
     - name: Release build
       uses: actions/upload-artifact@v3
       with:
         path: ${{ steps.build.outputs.outfile }}
-        name: Image.gz-dtb
+        name: Image
         token: ${{ secrets.GITHUB_TOKEN }}
