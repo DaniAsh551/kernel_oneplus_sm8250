@@ -28,9 +28,8 @@ jobs:
         image: Image.gz-dtb
 
     - name: Release build
-      uses: ncipollo/release-action@v1
+      uses: actions/upload-artifact@v3
       with:
-        replacesArtifacts: false
-        aallowUpdates: true
-        artifacts: ${{ steps.build.outputs.outfile }}
+        path: ${{ steps.build.outputs.outfile }}
+        name: Image.gz-dtb
         token: ${{ secrets.GITHUB_TOKEN }}
